@@ -5,10 +5,6 @@ import org.springframework.stereotype.Component;
 @Component("NaiveFibonacciCalculator")
 public class NaiveFibonacciCalculator implements FibonacciCalculator{
 
-	/*
-	 * Known issues:
-	 * 
-	 */
 	@Override
 	public long[] generateFirstN(int n) {
 		if(n < 0) {
