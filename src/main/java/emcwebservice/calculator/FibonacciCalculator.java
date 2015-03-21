@@ -1,7 +1,9 @@
 package emcwebservice.calculator;
 
+import java.math.BigInteger;
+
 
 public interface FibonacciCalculator {
 
-	public long[] generateFirstN(int n);
+	public BigInteger[] generateFirstN(int n);
 }

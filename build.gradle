@@ -11,8 +11,9 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
+apply plugin: 'war'
 
-jar {
+war {
     baseName = 'emc-web-service'
     version =  '1.0'
 }

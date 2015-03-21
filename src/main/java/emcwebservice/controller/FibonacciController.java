@@ -1,5 +1,6 @@
 package emcwebservice.controller;
 
+import java.math.BigInteger;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ public class FibonacciController {
 			@PathVariable int n){
 
 		try {
-			long[] result = fibCalculator.generateFirstN(n);
+			BigInteger[] result = fibCalculator.generateFirstN(n);
 			return Arrays.toString(result);
 			
 		} catch(IllegalArgumentException e) {
