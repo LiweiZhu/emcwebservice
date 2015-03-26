@@ -1,5 +1,7 @@
 package emcwebservice.test;
 
+import java.math.BigInteger;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -19,8 +21,19 @@ public class NaiveFibonacciCalculatorTest {
 	@Test
 	public void testCorrectInput() {
 		int n = 10;
-		long[] result = calculator.generateFirstN(n);
-		long[] expectedResult = new long[]{0, 1, 1, 2, 3, 5, 8, 13, 21, 34};
+		BigInteger[] result = calculator.generateFirstN(n);
+		
+		BigInteger two = new BigInteger("2");
+		BigInteger three = new BigInteger("3");
+		BigInteger five = new BigInteger("5");
+		BigInteger eight = new BigInteger("8");
+		BigInteger thirteen = new BigInteger("13");
+		BigInteger twentyOne = new BigInteger("21");
+		BigInteger thirtyFour = new BigInteger("34");
+		
+		BigInteger[] expectedResult = new BigInteger[]{BigInteger.ZERO, BigInteger.ONE, 
+				BigInteger.ONE, two, three, five, eight, thirteen, twentyOne, thirtyFour};
+		
 		Assert.assertArrayEquals(result, expectedResult);
 	}
 }
